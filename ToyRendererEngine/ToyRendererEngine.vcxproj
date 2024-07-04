@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\Application.h" />
+    <ClInclude Include="Core\Engine.h" />
+    <ClInclude Include="Core\ImGui\ImGuiManager.h" />
+    <ClInclude Include="Core\Input\InputManager.h" />
+    <ClInclude Include="Core\Input\Keyboard\InputKeyboard.h" />
+    <ClInclude Include="Core\Input\Mouse\InputMouse.h" />
+    <ClInclude Include="Core\MeshLoader\MeshLoader.h" />
+    <ClInclude Include="Core\Renderer\VulkanRenderer.h" />
+    <ClInclude Include="Core\Renderer\VulkanViewport.h" />
+    <ClInclude Include="Core\Time\TimeManager.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Platform\BaseWindow.h" />
+    <ClInclude Include="Platform\VulkanWindow\VulkanWindow.h" />
+    <ClInclude Include="RHI\Vulkan\Buffer\VulkanStaticMesh.h" />
+    <ClInclude Include="RHI\Vulkan\Buffer\VulkanBuffer.h" />
+    <ClInclude Include="RHI\Vulkan\Buffer\VulkanCommandBuffer.h" />
+    <ClInclude Include="RHI\Vulkan\Buffer\VulkanIndexBuffer.h" />
+    <ClInclude Include="RHI\Vulkan\Buffer\VulkanUniformBuffer.h" />
+    <ClInclude Include="RHI\Vulkan\Buffer\VulkanVertexBuffer.h" />
+    <ClInclude Include="RHI\Vulkan\RenderTarget\VulkanRenderTarget.h" />
+    <ClInclude Include="RHI\Vulkan\RenderTarget\VulkanRenderTargetDeferred.h" />
+    <ClInclude Include="RHI\Vulkan\RenderTarget\VulkanRenderTargetForward.h" />
+    <ClInclude Include="RHI\Vulkan\Texture\VulkanTexture.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanCommon.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanDebug.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanDevice.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanExtensionLayer.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanMaterial.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanPipeline.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanPipelineInfo.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanQueue.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanRHI.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanShader.h" />
+    <ClInclude Include="RHI\Vulkan\VulkanSwapChain.h" />
+    <ClInclude Include="Scene\Component\Component.h" />
+    <ClInclude Include="Scene\Component\Material\MaterialComponent.h" />
+    <ClInclude Include="Scene\Component\Mesh\StaticMeshComponent.h" />
+    <ClInclude Include="Scene\Component\Transform\TransformComponent.h" />
+    <ClInclude Include="Scene\GameObject.h" />
+    <ClInclude Include="Scene\Object\CameraGameObject.h" />
+    <ClInclude Include="Scene\World\World.h" />
+    <ClInclude Include="Util\IExecute.h" />
+    <ClInclude Include="Util\Math.h" />
+    <ClInclude Include="Util\Path.h" />
+    <ClInclude Include="Util\VertexIndexLayout.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\Application.cpp" />
+    <ClCompile Include="Core\Engine.cpp" />
+    <ClCompile Include="Core\ImGui\ImGuiManager.cpp" />
+    <ClCompile Include="Core\Input\InputManager.cpp" />
+    <ClCompile Include="Core\Input\Keyboard\InputKeyboard.cpp" />
+    <ClCompile Include="Core\Input\Mouse\InputMouse.cpp" />
+    <ClCompile Include="Core\MeshLoader\MeshLoader.cpp" />
+    <ClCompile Include="Core\Renderer\VulkanRenderer.cpp" />
+    <ClCompile Include="Core\Renderer\VulkanViewport.cpp" />
+    <ClCompile Include="Core\Time\TimeManager.cpp" />
+    <ClCompile Include="Platform\BaseWindow.cpp" />
+    <ClCompile Include="Platform\VulkanWindow\VulkanWindow.cpp" />
+    <ClCompile Include="RHI\Vulkan\Buffer\VulkanStaticMesh.cpp">
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <SupportJustMyCode>true</SupportJustMyCode>
+      <AssemblerOutput>NoListing</AssemblerOutput>
+      <AssemblerListingLocation>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</AssemblerListingLocation>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <BrowseInformation>false</BrowseInformation>
+      <BrowseInformationFile>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</BrowseInformationFile>
+      <CompileAs>Default</CompileAs>
+      <ConformanceMode>true</ConformanceMode>
+      <DiagnosticsFormat>Column</DiagnosticsFormat>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <ErrorReporting>Prompt</ErrorReporting>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <EnableASAN>false</EnableASAN>
+      <EnableFuzzer>false</EnableFuzzer>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <GenerateModuleDependencies>false</GenerateModuleDependencies>
+      <GenerateSourceDependencies>false</GenerateSourceDependencies>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ModuleDependenciesFile>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</ModuleDependenciesFile>
+      <ModuleOutputFile>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</ModuleOutputFile>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ObjectFileName>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</ObjectFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ProgramDataBaseFileName>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\_Libraries\ToyRendererEngine.pdb</ProgramDataBaseFileName>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\ToyRendererEngine.pch</PrecompiledHeaderOutputFile>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessKeepComments>false</PreprocessKeepComments>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+      <ShowIncludes>false</ShowIncludes>
+      <SourceDependenciesFile>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</SourceDependenciesFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <SpectreMitigation>false</SpectreMitigation>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <TrackerLogDirectory>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\ToyRende.3D122834.tlog\</TrackerLogDirectory>
+      <TranslateIncludes>false</TranslateIncludes>
+      <MinimalRebuildFromTracking>true</MinimalRebuildFromTracking>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>true</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <XMLDocumentationFileName>C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\DebugObject\Debug_ToyRendererEngine\</XMLDocumentationFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <IntelJCCErratum>false</IntelJCCErratum>
+      <BuildStlModules>false</BuildStlModules>
+      <TreatAngleIncludeAsExternal>false</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
+      <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
+      <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_UNICODE;UNICODE;</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\;C:\VulkanSDK\1.3.280.0\Include;C:\VulkanSDK\1.3.280.0\..\glm;C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\ThirdParty\;C:\Users\korakwon\Desktop\VulkanProject\VulkanProject\ThirdParty\Assimp\include\;</AdditionalIncludeDirectories>
+      <LibCompiled>true</LibCompiled>
+    </ClCompile>
+    <ClCompile Include="RHI\Vulkan\Buffer\VulkanBuffer.cpp" />
+    <ClCompile Include="RHI\Vulkan\Buffer\VulkanCommandBuffer.cpp" />
+    <ClCompile Include="RHI\Vulkan\Buffer\VulkanIndexBuffer.cpp" />
+    <ClCompile Include="RHI\Vulkan\Buffer\VulkanUniformBuffer.cpp" />
+    <ClCompile Include="RHI\Vulkan\Buffer\VulkanVertexBuffer.cpp" />
+    <ClCompile Include="RHI\Vulkan\RenderTarget\VulkanRenderTarget.cpp" />
+    <ClCompile Include="RHI\Vulkan\RenderTarget\VulkanRenderTargetDeferred.cpp" />
+    <ClCompile Include="RHI\Vulkan\RenderTarget\VulkanRenderTargetForward.cpp" />
+    <ClCompile Include="RHI\Vulkan\Texture\VulkanTexture.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanDebug.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanDevice.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanExtensionLayer.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanInstance.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanMaterial.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanPipeline.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanPipelineInfo.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanQueue.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanRHI.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanShader.cpp" />
+    <ClCompile Include="RHI\Vulkan\VulkanSwapChain.cpp" />
+    <ClCompile Include="Scene\Component\Component.cpp" />
+    <ClCompile Include="Scene\Component\Material\MaterialComponent.cpp" />
+    <ClCompile Include="Scene\Component\Mesh\StaticMeshComponent.cpp" />
+    <ClCompile Include="Scene\Component\Transform\TransformComponent.cpp" />
+    <ClCompile Include="Scene\GameObject.cpp" />
+    <ClCompile Include="Scene\Object\CameraGameObject.cpp" />
+    <ClCompile Include="Scene\World\World.cpp" />
+    <ClCompile Include="Util\Path.cpp" />
+    <ClCompile Include="Util\VertexIndexLayout.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RHI\DX\" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{3D122834-C614-4CF4-9140-7F80B1AEBC63}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ToyRendererEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)_Libraries\</OutDir>
+    <IntDir>$(SolutionDir)DebugObject\Debug_$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.\;$(VULKAN_SDK)\Include;$(VULKAN_SDK)\..\glm;$(SolutionDir)ThirdParty\;$(SolutionDir)ThirdParty\Assimp\include\;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy $(SolutionDir)ThirdParty\Assimp\lib\*.lib $(SolutionDir)_Libraries\ThirdParty\Assimp\lib\ /Y /E
+ xcopy $(SolutionDir)ThirdParty\Assimp\lib\*.dll $(SolutionDir)$(Configuration)\ /Y /E</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
